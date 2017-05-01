@@ -1,4 +1,4 @@
-img {
+/*img {
   max-width: 100%;
 }
 
@@ -20,18 +20,18 @@ hr {
 
 /*TEXT STYLES
 =======================================*/
-p {
+/*p {
   font-size: 1em;
 }
 
 address {
   display: inline-block;
-}
+}*/
 
 /*LINK STYLES
 =======================================*/
 
-a, a:link, a:active {
+/*a, a:link, a:active {
   text-decoration: none;
   color: #777;
 }
@@ -41,11 +41,11 @@ a:hover, a:focus {
 }
 
 a:visited {
-}
+}*/
 
 /*FORM STYLES
 =======================================*/
-label {
+/*label {
   font-size: 3em;
 }
 
@@ -77,4 +77,4 @@ input:invalid, textarea:invalid {
 
 input:valid, textarea:valid {
   border-color: #89CB8E;
-}
+}*/*/
