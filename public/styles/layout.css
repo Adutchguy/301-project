@@ -1,39 +1,124 @@
-.pull-left {
-  float: left;
+html {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: scroll;
 }
 
-.pull-right {
-  float: right;
+body {
+  background-size: cover;
+  background: #000;
 }
 
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+.background {
+  max-width: 100%;
+  max-height: 100%;
+  filter: grayscale(1);
 }
 
-.heading-group-h1 {
-  max-width: 80%;
+ul {
+  width:100%;
+  background-color: #FFF;
+  background: linear-gradient(#FFF 0%, #bbbbbb 100%);
+  box-shadow: 0px 0px 1em rgba(0,0,0,0.15);
+  padding: 1em;
+  border: 0.1em solid black;
+  display: inline-block;
 }
 
-#filters select {
-  width: 90%;
-  margin: .2em 5%;
+li {
+  width: 20%;
+  border-right: 1px solid #eeee;
+  display: inline-block;
 }
 
-@media only screen and (min-width: 640px) {
-  .heading-group-h1 {
-    padding: .1em .1em .1em 2em;
-    float: none;
+li:last-child {
+  border-right:none;
+}
+
+li a {
+  display: inline-block;
+  width: 80%;
+  background: #ddd;
+  padding: 4% 10%;
+  font-size: 1.1em;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media screen (max-width: 767px) {
+  #menu {
+    width:1.4em;
+    display: block;
+    background:#ddd;
+    font-size:1.35em;
+    text-align: center;
   }
 
-  #filters select {
-    width: 15em;
-    margin: .2em .2em;
+  #nav.js {
+    display: none;
   }
 
-  #filters li {
-    width: 20em;
-    display: inline;
+  li {
+    width:100%;
+    border-right:none;
+    text-align: center;
   }
 }
+
+nav {
+  position: absolute;
+  top: 0;
+  right: 23.2em;
+  width: 40%;
+  text-align: center;
+}
+
+nav ul li:hover > ul {
+	display: block;
+}
+
+nav ul {
+  position: relative;
+	padding: 0 0 0 0;
+  border: 1px solid black;
+  margin-top: 0.7em;
+  text-align: center;
+  border-top-left-radius:28vw;
+  border-bottom-left-radius:28vw;
+  border-top-right-radius:28vw;
+  border-bottom-right-radius:28vw;
+}
+
+nav ul:after {
+	content: ""; clear: both; display: block;
+}
+
+nav ul li:hover {
+  color:inherit;
+	background: #000;
+	background: linear-gradient(#000 0%, #BCC6CC 100%);
+  border-top-left-radius:28vw;
+  border-bottom-left-radius:28vw;
+  border-top-right-radius:28vw;
+  border-bottom-right-radius:28vw;
+}
+
+nav ul li:hover a {
+  background-color: inherit;
+  color: #FFF;
+  text-align: center;
+}
+
+nav ul li a {
+  background-color: inherit;
+	display: block;
+  padding-top: 1.5vw;
+  padding-bottom: 1.5vw;
+	color: #000;
+  text-decoration: none;
+}
+
+@media (min-width: 767px) {
+  #menu {
+    display: none;
+  }
