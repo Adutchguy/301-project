@@ -1,4 +1,4 @@
-/*@font-face {
+@font-face {
 	font-family: 'icomoon';
 	src:url('fonts/icomoon.eot?wfb79s');
 	src:url('fonts/icomoon.eot?wfb79s#iefix') format('embedded-opentype'),
@@ -19,11 +19,11 @@
 	line-height: 1;
 
 	/* Better Font Rendering =========== */
-	/*-webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}*/
+}
 
-/*.icon-home:before {
+.icon-home:before {
 	content: "\e908";
 }
 .icon-home3:before {
@@ -67,4 +67,4 @@
 }
 .icon-github:before {
 	content: "\e907";
-}*/*/
+}
