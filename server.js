@@ -25,6 +25,6 @@ function proxyTicketmaster(request, response) {
   }))(request, response);
 }
 
-app.get('*', proxyTicketmaster);
+app.get('/ticketmaster/*', proxyTicketmaster);
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
