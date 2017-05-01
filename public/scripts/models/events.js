@@ -3,19 +3,26 @@
 (function(module) {
   const events = {};
 
+  events.objects = [];
+
   events.all = [];
 
-  events.object = '';
+  events.getData = [];
 
-  // events.requestEvents = () => {
-  //   $.get('/discovery/v2/events.json:size=100&sort=date,name,asc&city=Seattle&classificationName=Music')
-  //   .then(data => events.object = data).then(data => events.all = data._embedded.events), err => console.log(err)
-  // };
-  events.requestEvents = () => {
-    $.get('https://app.ticketmaster.com/discovery/v2/events.json?size=300&sort=date,name,asc&city=Seattle&classificationName=Music&apikey=aPLdF6GC2G6nLNrygytPbkvPzCU7CjGS')
-    .then(data => events.object = data).then(data => events.all = data._embedded.events), err => console.log(err)
+  events.fetchAll = function(data) {
+    events.all.map(function(data) {
+      let newEvent = new Event(data);
+    });
   };
-  // events.requestEvents();
+
+  events.requestEvents = () => {
+    $.get('https://app.ticketmaster.com/discovery/v2/events.json?size=2&sort=date,name,asc&city=Seattle&classificationName=Music&apikey=aPLdF6GC2G6nLNrygytPbkvPzCU7CjGS')
+    .then(data => events.all = data._embedded.events)
+    .then(data => events.fetchAll(data)).then(res => console.log(res)), err => console.log(err)
+  };
+  events.requestEvents();
+
 
   module.events = events;
+
 })(window);
