@@ -1,4 +1,4 @@
 'use strict';
 
-page('/', indexController.index);
+page('/', indexController.render);
 page();

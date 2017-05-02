@@ -15,6 +15,7 @@
     this.latitude = data._embedded.venues[0].location.latitude;
     this.longitude = data._embedded.venues[0].location.longitude;
     events.objects.push(this);
+    console.log(this);
   };
 
 module.eventsConstructor = eventsConstructor;

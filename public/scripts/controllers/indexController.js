@@ -2,9 +2,9 @@
 
 (function(module) {
   const indexController = {};
-
-  indexController.index = () => {
-    events.requestEvents();
+  indexController.render = () => {
+    $('#events').children().remove();
+    events.requestEvents(eventView.render);
   };
 
   module.indexController = indexController;

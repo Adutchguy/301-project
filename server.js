@@ -10,12 +10,14 @@ require('redis-streams')(redis);
 
 const PORT = process.env.PORT || 3000;
 const app = express();
-const conString = process.env.DATABASE_URL + 'events';
+const conString = process.env.DATABASE_URL + 'project301';
 const client = new pg.Client(conString);
 client.connect();
 client.on('error', err => console.error(err));
 
 app.use(express.static('./public'));
+
+app.get('/', (request,response) => response.sendFile('index.html', {root:'./public'})
 
 function proxyTicketmaster(request, response) {
   console.log('Routing Ticketmaster request for', request.params[0]);
