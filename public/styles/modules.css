@@ -1,8 +1,11 @@
-.event-articles{
-  color: white;
-}
+/*HEADER*/
 
 /*NAV DESIGN*/
+
+nav ul li:hover > ul {
+	display: block;
+}
+
 ul {
   width:100%;
   background-color: #FFF;
@@ -31,4 +34,53 @@ li a {
   font-size: 1.1em;
   text-decoration: none;
   text-align: center;
+}
+
+
+nav ul {
+  position: relative;
+	padding: 0 0 0 0;
+  border: 1px solid black;
+  margin-top: 0.7em;
+  text-align: center;
+  border-top-left-radius:28vw;
+  border-bottom-left-radius:28vw;
+  border-top-right-radius:28vw;
+  border-bottom-right-radius:28vw;
+}
+
+nav ul:after {
+	content: ""; clear: both; display: block;
+}
+
+nav ul li:hover {
+  color:inherit;
+	background: #000;
+	background: linear-gradient(#000 0%, #BCC6CC 100%);
+  border-top-left-radius:28vw;
+  border-bottom-left-radius:28vw;
+  border-top-right-radius:28vw;
+  border-bottom-right-radius:28vw;
+}
+
+nav ul li:hover a {
+  background-color: inherit;
+  color: #FFF;
+  text-align: center;
+}
+
+nav ul li a {
+  background-color: inherit;
+	display: block;
+  padding-top: 1.5vw;
+  padding-bottom: 1.5vw;
+	color: #000;
+  text-decoration: none;
+}
+
+/*FILTER*/
+
+/*EVENTS*/
+.event-articles{
+  color: white;
 }
