@@ -25,3 +25,8 @@ footer {
   height: 20vw;
   outline: 1px solid purple;
 }
+
+p {
+  margin: 0;
+  padding: 0;
+}

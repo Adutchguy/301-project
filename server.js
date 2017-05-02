@@ -29,27 +29,27 @@ function proxyTicketmaster(request, response) {
 
 app.get('/ticketmaster/*', proxyTicketmaster);
 
-loadDB();
+// loadDB();
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
 
-function loadDB() {
-  client.query(`
-    CREATE TABLE IF NOT EXISTS
-    events (
-      artist VARCHAR(255),
-      venue VARCHAR(255),
-      date INT,
-      time INT,
-      address VARCHAR(255),
-      description VARCHAR(255),
-      link VARCHAR(255),
-      image VARCHAR(255),
-      latitude INT,
-      longitude INT,
-      genre VARCHAR(255),
-      category VARCHAR(255)
-    );`
-  )
-  .catch(console.error);
-}
+// function loadDB() {
+//   client.query(`
+//     CREATE TABLE IF NOT EXISTS
+//     events (
+//       artist VARCHAR(255),
+//       venue VARCHAR(255),
+//       date INT,
+//       time INT,
+//       address VARCHAR(255),
+//       description VARCHAR(255),
+//       link VARCHAR(255),
+//       image VARCHAR(255),
+//       latitude INT,
+//       longitude INT,
+//       genre VARCHAR(255),
+//       category VARCHAR(255)
+//     );`
+//   )
+//   .catch(console.error);
+// }
