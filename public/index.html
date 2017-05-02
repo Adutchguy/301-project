@@ -15,15 +15,13 @@
 
 
     <script id="event-template" type="text/x-handlebars-template">
-      <article class="event-articles">
-        <p class="event-artist">Artist: {{artist}}</p>
-        <p>Date: {{date}}</p>
-        <p>Time: {{time}}</p>
-        <p>Venue: {{venue}}</p>
-        <p>Address: {{address}}</p>
+      <span class="event-articles">
+        <img src="{{img}}" />
+        <p>{{artist}} : {{date}} @ {{time}}</p>
+        <p>{{venue}} : {{address}}</p>
+        <p>{{description}}</p>
         <a href="{{url}}">{{event-link}}</a>
-        <p>Description: {{description}}</p>
-      </article>
+      </span>
     </script>
   </head>
 
@@ -36,8 +34,10 @@
         </ul>
       </nav>
     </header>
+    <article class="about-site">
+      Instruction on how to use our site and brief discription on how to use it.
+    </article>
     <section id="filter-container">
-
     </section>
     <section id="events">
 
