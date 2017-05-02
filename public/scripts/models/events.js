@@ -25,18 +25,18 @@
   };
 
   events.prototype.insertRecord = function(callback) {
-    $.post(events.objects, {
-        artist: this.artist;
-        venue: this.venue;
-        date: this.date;
-        time: this.time;
-        address: this.address;
-        description: this.description;
-        link: this.link;
-        image: this.image;
-        latitude: this.latitude;
-        longitude: this.longitude;
-        genre: this.genre;
+    $.post('/project301', {
+        artist: this.artist,
+        venue: this.venue,
+        date: this.date,
+        time: this.time,
+        address: this.address,
+        description: this.description,
+        link: this.link,
+        image: this.image,
+        latitude: this.latitude,
+        longitude: this.longitude,
+        genre: this.genre
       })
     .then(console.log)
     .then(callback);

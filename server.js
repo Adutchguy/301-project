@@ -37,19 +37,18 @@ function loadDB() {
   client.query(`
     CREATE TABLE IF NOT EXISTS
     events (
-      artist VARCHAR(255) NOT NULL
-      venue VARCHAR(255) NOT NULL
-      date INT
-      time INT
-      address VARCHAR(255) NOT NULL
-      description VARCHAR(255) NOT NULL
-      link VARCHAR(255) NOT NULL
-      image VARCHAR(255) NOT NULL
-      latitude INT
-      longitude INT
-      genre VARCHAR(255) NOT NULL
-      artist VARCHAR(255) NOT NULL,
-      category VARCHAR(255) NOT NULL
+      artist VARCHAR(255),
+      venue VARCHAR(255),
+      date INT,
+      time INT,
+      address VARCHAR(255),
+      description VARCHAR(255),
+      link VARCHAR(255),
+      image VARCHAR(255),
+      latitude INT,
+      longitude INT,
+      genre VARCHAR(255),
+      category VARCHAR(255)
     );`
   )
   .catch(console.error);
