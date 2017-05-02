@@ -84,29 +84,44 @@ nav ul li a {
 .event-articles{
   position: relative;
   width: 100vw;
+	height: 15vw;
 }
 
 .event-image {
   position: absolute;
-  transform: translateY(50%);
+  transform: translateY(-50%);
   top: 30%;
-  width: 50%;
+  width: 12%;
 }
 
 .event-artist {
   position: absolute;
+	top: 2%;
+	left: 15%;
+}
+
+.event-date {
+	position: absolute;
+	top: 2%;
+	left: 15%;
 }
 
 .event-venue{
   position: absolute;
+	top: 2%;
+	left: 15%;
 }
 
 .event-description {
   position: absolute;
+	top: 2%;
+	left: 15%;
 }
 
 .event-link {
   position: absolute;
+	top: 2%;
+	left: 15%;
 }
 
 /*FOOTER*/
