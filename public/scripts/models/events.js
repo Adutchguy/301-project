@@ -7,8 +7,6 @@
 
   events.all = [];
 
-  events.getData = [];
-
   events.fetchAll = data => events.all.map(function(data){
     let newEvent = new Event(data);
     newEvent.insertRecord();
