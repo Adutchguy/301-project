@@ -50,17 +50,17 @@ app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
 function loadDB() {
   client.query(`
     CREATE TABLE IF NOT EXISTS
-    events (
+    project301 (
       artist VARCHAR(255),
       venue VARCHAR(255),
-      date INT,
-      time INT,
+      date DATE,
+      time TIME,
       address VARCHAR(255),
       description VARCHAR(255),
       link VARCHAR(255),
       image VARCHAR(255),
-      latitude INT,
-      longitude INT,
+      latitude DECIMAL,
+      longitude DECIMAL,
       genre VARCHAR(255)
     );`
   )
