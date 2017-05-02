@@ -1,9 +1,8 @@
 'use strict';
 
 (function(module) {
-  const eventsConstructor = {};
 
-  eventsConstructor.Event = function(data) {
+  function Event(data) {
     this.venue = data._embedded.venues[0].name;
     this.artist = data._embedded.attractions[0].name;
     this.date = data.dates.start.localDate;
@@ -16,8 +15,23 @@
     this.longitude = data._embedded.venues[0].location.longitude;
     this.genre = data.classifications[0].genre.name;
     events.objects.push(this);
-    console.log(this);
   };
 
-module.eventsConstructor = eventsConstructor;
-}(window))
+  Event.prototype.insertRecord = function(){
+    $.post('/project301', {
+      artist: this.artist,
+      venue: this.venue,
+      date: this.date,
+      time: this.time,
+      address: this.address,
+      description: this.description,
+      link: this.link,
+      image: this.image,
+      latitude: this.latitude,
+      longitude: this.longitude,
+      genre: this.genre
+    });
+  };
+
+  module.Event = Event;
+}(window));
