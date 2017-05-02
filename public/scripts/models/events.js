@@ -42,31 +42,5 @@
     .then(callback);
   };
 
-//   events.prototype.deleteRecord = function(callback) {
-//   $.ajax({
-//     url: `/articles/${this.article_id}`,
-//     method: 'DELETE'
-//   })
-//   .then(console.log)
-//   .then(callback);
-// };
-//
-// events.prototype.updateRecord = function(callback) {
-//   $.ajax({
-//     url: `/articles/${this.article_id}`,
-//     method: 'DELETE',
-//     data: {
-//       author: this.author,
-//       authorUrl: this.authorUrl,
-//       body: this.body,
-//       category: this.category,
-//       publishedOn: this.publishedOn,
-//       title: this.title,
-//       author_id: this.author_id
-//     }
-//   })
-//   .then(console.log)
-//   .then(callback);
-// };
   module.events = events;
 })(window);
