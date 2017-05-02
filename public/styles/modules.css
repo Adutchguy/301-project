@@ -83,45 +83,51 @@ nav ul li a {
 /*EVENTS*/
 .event-articles{
   position: relative;
-  width: 100vw;
+  width: 100%;
 	height: 15vw;
 }
 
 .event-image {
   position: absolute;
   transform: translateY(-50%);
-  top: 30%;
-  width: 12%;
+  top: 50%;
+  width: 20%;
+	left: 1%;
 }
 
 .event-artist {
   position: absolute;
-	top: 2%;
-	left: 15%;
+	top: 5%;
+	left: 23%;
+	text-decoration: underline;
+	width: auto;
 }
 
 .event-date {
 	position: absolute;
-	top: 2%;
-	left: 15%;
+	top: 5%;
+	right: 6%;
 }
 
 .event-venue{
   position: absolute;
-	top: 2%;
-	left: 15%;
+	top: 25%;
+	left: 23%;
 }
 
 .event-description {
   position: absolute;
-	top: 2%;
-	left: 15%;
+	top: 45%;
+	left: 23%;
+	width: 78%;
+	height: 30%;
+	font-size: 1.7vw;
 }
 
 .event-link {
   position: absolute;
-	top: 2%;
-	left: 15%;
+	bottom: 10%;
+	right: 15%;
 }
 
 /*FOOTER*/
