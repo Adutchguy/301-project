@@ -3,10 +3,11 @@
 (function(module) {
   const eventView = {};
 
-  eventView.index = function(data) {
+  eventView.render = function() {
     const template = Handlebars.compile($('#event-template').text());
-    events.objects.forEach(arrayItem => $('#events').append(template(arrayItem)))
+    events.objects.forEach(arrayItem => {
+      $('#events').append(template(arrayItem));
+    });
   };
-
   module.eventView = eventView;
 })(window);
