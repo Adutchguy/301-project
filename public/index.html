@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="./styles/modules.css">
 
 
-    <script id="event-template" class="event-articles" type="text/x-handlebars-template">
-      <article>
-        <p>Artist: {{artist}}</p>
+    <script id="event-template" type="text/x-handlebars-template">
+      <article class="event-articles">
+        <p class="event-artist">Artist: {{artist}}</p>
         <p>Date: {{date}}</p>
         <p>Time: {{time}}</p>
         <p>Venue: {{venue}}</p>
@@ -28,18 +28,17 @@
   </head>
 
   <body>
-    <img class="background" src="./imgs/seattle.png" alt="">
     <header>
-      <h1>Pied Piper</h1>
+      <nav id="main-nav">
+        <ul id="nav">
+          <li><a id="home" href="/">Home</a></li>
+          <li><a href="#about_us">Team</a></li>
+        </ul>
+      </nav>
     </header>
-    <nav id="main-nav">
-      <ul id="nav">
-        <li><a id="home" href="/">Home</a></li>
-        <li><a href="#about_me">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#social-media">Contact</a></li>
-      </ul>
-    </nav>
+    <section id="filter-container">
+
+    </section>
     <section id="events">
 
     </section>
