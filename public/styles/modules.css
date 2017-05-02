@@ -82,5 +82,31 @@ nav ul li a {
 
 /*EVENTS*/
 .event-articles{
-  color: white;
+  position: relative;
+  width: 100vw;
 }
+
+.event-image {
+  position: absolute;
+  transform: translateY(50%);
+  top: 30%;
+  width: 50%;
+}
+
+.event-artist {
+  position: absolute;
+}
+
+.event-venue{
+  position: absolute;
+}
+
+.event-description {
+  position: absolute;
+}
+
+.event-link {
+  position: absolute;
+}
+
+/*FOOTER*/

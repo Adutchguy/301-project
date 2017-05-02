@@ -5,6 +5,7 @@ body {
   width: 80%;
   background: #000;
   outline: 1px solid red;
+  font-size: 2vw;
 }
 
 header {

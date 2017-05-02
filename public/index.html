@@ -16,11 +16,11 @@
 
     <script id="event-template" type="text/x-handlebars-template">
       <span class="event-articles">
-        <img src="{{img}}" />
-        <p>{{artist}} : {{date}} @ {{time}}</p>
-        <p>{{venue}} : {{address}}</p>
-        <p>{{description}}</p>
-        <a href="{{url}}">{{event-link}}</a>
+        <img class="event-image" src="{{image}}" />
+        <p class="event-artist">{{artist}} : {{date}} @ {{time}}</p>
+        <p class="event-venue">{{venue}} : {{address}}</p>
+        <p class="event-description">{{description}}</p>
+        <a class="event-link" href="{{link}}" target="_blank">Show More</a>
       </span>
     </script>
   </head>

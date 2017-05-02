@@ -2,6 +2,7 @@
 body {
   margin: 2% 10%;
   padding: 0;
+  color: white;
 }
 
 /*HEADER*/
@@ -12,8 +13,8 @@ header {
 /*NAV*/
 nav {
   position: absolute;
-  top: 0;
-  transform: translateX(-50%);
+  top: 12%;
+  transform: translate(-50%);
   left: 50%;
   width: 40%;
   text-align: center;
@@ -26,3 +27,7 @@ section {
 #events {
   height: auto;
 }
+
+/*SECTION*/
+
+/*FOOTER*/
