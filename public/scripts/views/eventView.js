@@ -1,12 +1,12 @@
 'use strict';
 
 (function(module) {
-  const repoView = {};
+  const eventView = {};
 
-  repoView.index = function() {
+  eventView.index = function(data) {
     const template = Handlebars.compile($('#event-template').text());
-    console.log(template);
+    events.objects.forEach(arrayItem => $('#events').append(template(arrayItem)))
   };
 
-  module.repoView = repoView;
+  module.eventView = eventView;
 })(window);
