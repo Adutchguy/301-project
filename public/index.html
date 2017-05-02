@@ -14,32 +14,31 @@
     <link rel="stylesheet" href="./styles/modules.css">
 
 
-    <script id="event-template" class="event-articles" type="text/x-handlebars-template">
-      <article>
-        <p>Artist: {{artist}}</p>
-        <p>Date: {{date}}</p>
-        <p>Time: {{time}}</p>
-        <p>Venue: {{venue}}</p>
-        <p>Address: {{address}}</p>
-        <a href="{{url}}">{{event-link}}</a>
-        <p>Description: {{description}}</p>
-      </article>
+    <script id="event-template" type="text/x-handlebars-template">
+      <span class="event-articles">
+        <img class="event-image" src="{{image}}" />
+        <p class="event-artist">{{artist}} : {{date}} @ {{time}}</p>
+        <p class="event-venue">{{venue}} : {{address}}</p>
+        <p class="event-description">{{description}}</p>
+        <a class="event-link" href="{{link}}" target="_blank">Show More</a>
+      </span>
     </script>
   </head>
 
   <body>
-    <img class="background" src="./imgs/seattle.png" alt="">
     <header>
-      <h1>Pied Piper</h1>
+      <nav id="main-nav">
+        <ul id="nav">
+          <li><a id="home" href="/">Home</a></li>
+          <li><a href="#about_us">Team</a></li>
+        </ul>
+      </nav>
     </header>
-    <nav id="main-nav">
-      <ul id="nav">
-        <li><a id="home" href="/">Home</a></li>
-        <li><a href="#about_me">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#social-media">Contact</a></li>
-      </ul>
-    </nav>
+    <article class="about-site">
+      Instruction on how to use our site and brief discription on how to use it.
+    </article>
+    <section id="filter-container">
+    </section>
     <section id="events">
 
     </section>

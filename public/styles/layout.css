@@ -1,141 +1,33 @@
-html {
-  max-width: 100%;
-  max-height: 100%;
-  overflow: scroll;
-}
-
+/*BODY*/
 body {
-  background-size: cover;
-  background: #000;
-}
-
-h1 {
-  font-family: 'Rye', cursive;
-  z-index: 2;
-  position: absolute;
-  top: 40%;
-  left: 0;
-  right: 0;
-  font-size: 5vw;
-  width: 100%;
-  height: 26px;
+  margin: 2% 10%;
   padding: 0;
-  margin: 0;
-  margin-top: -13px;
-  text-align: center;
-  color: #FFF;
+  color: white;
 }
 
-.background {
-  max-width: 100%;
-  max-height: 100%;
-  filter: grayscale(1);
+/*HEADER*/
+header {
+  position: relative;
 }
 
-ul {
-  width:100%;
-  background-color: #FFF;
-  background: linear-gradient(#FFF 0%, #bbbbbb 100%);
-  box-shadow: 0px 0px 1em rgba(0,0,0,0.15);
-  padding: 1em;
-  border: 0.1em solid black;
-  display: inline-block;
-}
-
-li {
-  width: 20%;
-  border-right: 1px solid #eeee;
-  display: inline-block;
-}
-
-li:last-child {
-  border-right:none;
-}
-
-li a {
-  display: inline-block;
-  width: 80%;
-  background: #ddd;
-  padding: 4% 10%;
-  font-size: 1.1em;
-  text-decoration: none;
-  text-align: center;
-}
-
-@media screen (max-width: 767px) {
-  #menu {
-    width:1.4em;
-    display: block;
-    background:#ddd;
-    font-size:1.35em;
-    text-align: center;
-  }
-
-  #nav.js {
-    display: none;
-  }
-
-  li {
-    width:100%;
-    border-right:none;
-    text-align: center;
-  }
-}
-
+/*NAV*/
 nav {
   position: absolute;
-  top: 0;
-  right: 23.2em;
+  top: 12%;
+  transform: translate(-50%);
+  left: 50%;
   width: 40%;
   text-align: center;
 }
 
-nav ul li:hover > ul {
-	display: block;
+section {
+  margin: 2% 0;
 }
 
-nav ul {
-  position: relative;
-	padding: 0 0 0 0;
-  border: 1px solid black;
-  margin-top: 0.7em;
-  text-align: center;
-  border-top-left-radius:28vw;
-  border-bottom-left-radius:28vw;
-  border-top-right-radius:28vw;
-  border-bottom-right-radius:28vw;
+#events {
+  height: auto;
 }
 
-nav ul:after {
-	content: ""; clear: both; display: block;
-}
+/*SECTION*/
 
-nav ul li:hover {
-  color:inherit;
-	background: #000;
-	background: linear-gradient(#000 0%, #BCC6CC 100%);
-  border-top-left-radius:28vw;
-  border-bottom-left-radius:28vw;
-  border-top-right-radius:28vw;
-  border-bottom-right-radius:28vw;
-}
-
-nav ul li:hover a {
-  background-color: inherit;
-  color: #FFF;
-  text-align: center;
-}
-
-nav ul li a {
-  background-color: inherit;
-	display: block;
-  padding-top: 1.5vw;
-  padding-bottom: 1.5vw;
-	color: #000;
-  text-decoration: none;
-}
-
-@media (min-width: 767px) {
-  #menu {
-    display: none;
-  }
+/*FOOTER*/
