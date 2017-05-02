@@ -14,6 +14,7 @@
     this.image = data.images[0].url;
     this.latitude = data._embedded.venues[0].location.latitude;
     this.longitude = data._embedded.venues[0].location.longitude;
+    this.genre = data.classifications[0].genre.name;
     events.objects.push(this);
     console.log(this);
   };
