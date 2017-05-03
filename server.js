@@ -25,15 +25,16 @@ app.use(bodyParser.json());
 
 app.get('/', (request,response) => response.sendFile('index.html', {root:'./public'}))
 
-// function proxyTicketmaster(request, response) {
-//   console.log('Routing Ticketmaster request for', request.params[0]);
-//   (requestProxy({
-//     url: `https://app.ticketmaster.com/${request.params[0]}`,
-//     headers: {Authorization: `token ${process.env.TICKETMASTER_TOKEN}`}
-//   }))(request, response);
-// }
-//
-// app.get('/ticketmaster/*', proxyTicketmaster);
+app.post('/project301', loadEvents);
+
+function loadEvents(request, response) {
+
+  client.query(
+    `INSERT INTO
+    project301(artist, venue, date, time, address, description, link, image, latitude, longitude, genre) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)`,
+    [request.body.artist, request.body.venue, request.body.date, request.body.time, request.body.address, request.body.description, request.body.link, request.body.image, request.body.latitude, request.body.longitude, request.body.genre]
+  )
+}
 
 loadDB();
 app.post('/project301', loadEvents);

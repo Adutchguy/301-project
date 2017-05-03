@@ -1,55 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
-    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <meta charset="UTF-8">
-    <title>Pied Piper</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pied Piper</title>
     <link rel="stylesheet" href="/vendor/styles/normalize.css">
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/icons.css">
     <link rel="stylesheet" href="./styles/layout.css">
     <link rel="stylesheet" href="./styles/modules.css">
-
+    <link href = "https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" rel = "stylesheet">
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+    crossorigin="anonymous"></script>
 
     <script id="event-template" type="text/x-handlebars-template">
       <article class="event-articles" data-genre="{{genre}}">
-        <img class="event-image" src="{{image}}" />
-        <p class="event-artist">{{artist}}</p>
-        <p class="event-date">{{date}} @ {{time}}</p>
-        <p class="event-venue">{{venue}}</p>
-        <p class="event-address">{{address}}</p>
-        <p class="event-description">{{description}} <a href="{{link}}" target="_blank">Show More</a></p>
+        <div class="event-date">{{date}} @ {{time}}</br>
+        {{address}}</div>
+        <div id="event-img">
+          <img class="event-image" src="{{image}}" />
+        </div>
+        <div id="event-info">
+          <p class="event-artist">{{artist}}</p>
+          <p class="event-venue">{{venue}}</p>
+          <p class="event-description">{{description}} <a href="{{link}}" target="_blank">Show More</a></p>
+        </div>
       </article>
     </script>
   </head>
 
   <body>
     <header>
-      <nav id="main-nav">
-        <ul id="nav">
-          <li><a id="home" href="/">Home</a></li>
-          <li><a href="#about_us">Team</a></li>
-        </ul>
-      </nav>
+      <h1 id="page-name">THE SOUND</h1>
     </header>
-    <span class="about-site">
-      Instruction on how to use our site and brief discription on how to use it.
-    </span>
+    <p class="about-site">
+      Search below to find upcoming concerts in Seattle
+    </p>
     <section class="filter-container">
         <div>
           <ul id="filters">
             <li>
+              <p>Venue:</p>
               <select id="venue-filter">
                 <option value="">-- Filter by Venues --</option>
               </select>
             </li>
             <li>
+              <p>Genre:</p>
               <select id="genre-filter">
                 <option value="">-- Filter by Genres --</option>
               </select>
+            </li>
+            <li>
+                <input type = "text" id="calendar-filter" />
+                <!-- <a> Filter by Dates </a> -->
+            </li>
+        </script>
+    </div>
+</div>
             </li>
           </ul>
         </div>
