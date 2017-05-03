@@ -53,5 +53,9 @@
     });
   };
 
+    $(function () {
+        $('#calendar-filter').datetimepicker();
+    });
+
   module.eventView = eventView;
 })(window);
