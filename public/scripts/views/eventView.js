@@ -41,7 +41,7 @@
     });
   };
 
-  articleView.handleGenreFilter = function() {
+  eventView.handleGenreFilter = function() {
     $('#genre-filter').on('change', function() {
       if ($(this).val()) {
         $('article').hide();
