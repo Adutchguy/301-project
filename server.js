@@ -56,7 +56,7 @@ function loadDB() {
       date DATE,
       time TIME,
       address VARCHAR(255),
-      description VARCHAR(255),
+      description VARCHAR,
       link VARCHAR(255),
       image VARCHAR(255),
       latitude DECIMAL,

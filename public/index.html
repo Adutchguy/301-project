@@ -15,11 +15,12 @@
 
 
     <script id="event-template" type="text/x-handlebars-template">
-      <article class="event-articles">
+      <article class="event-articles" data-genre="{{genre}}">
         <img class="event-image" src="{{image}}" />
         <p class="event-artist">{{artist}}</p>
         <p class="event-date">{{date}} @ {{time}}</p>
-        <p class="event-venue">{{venue}} : {{address}}</p>
+        <p class="event-venue">{{venue}}</p>
+        <p class="event-address">{{address}}</p>
         <p class="event-description">{{description}} <a href="{{link}}" target="_blank">Show More</a></p>
       </article>
     </script>
@@ -34,9 +35,9 @@
         </ul>
       </nav>
     </header>
-    <article class="about-site">
+    <span class="about-site">
       Instruction on how to use our site and brief discription on how to use it.
-    </article>
+    </span>
     <section class="filter-container">
         <div>
           <ul id="filters">
