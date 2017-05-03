@@ -18,6 +18,7 @@
   };
 
   Event.prototype.insertRecord = function(){
+    console.log(this);
     $.post('/project301', {
       artist: this.artist,
       venue: this.venue,

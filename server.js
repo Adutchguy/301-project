@@ -10,7 +10,6 @@ const express = require('express');
 const requestProxy = require('express-request-proxy');
 const bodyParser = require('body-parser');
 const request = require('superagent');
-const eventsURL = 'https://app.ticketmaster.com/discovery/v2/events.json?size=1&sort=date,name,asc&city=Seattle&classificationName=Music&apikey=aPLdF6GC2G6nLNrygytPbkvPzCU7CjGS';
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -25,19 +24,6 @@ app.use(bodyParser.json());
 
 app.get('/', (request,response) => response.sendFile('index.html', {root:'./public'}))
 
-app.post('/project301', loadEvents);
-
-function loadEvents(request, response) {
-
-  client.query(
-    `INSERT INTO
-    project301(artist, venue, date, time, address, description, link, image, latitude, longitude, genre) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)`,
-    [request.body.artist, request.body.venue, request.body.date, request.body.time, request.body.address, request.body.description, request.body.link, request.body.image, request.body.latitude, request.body.longitude, request.body.genre]
-  )
-}
-
-loadDB();
-app.post('/project301', loadEvents);
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
 
@@ -51,7 +37,7 @@ function loadDB() {
       time TIME,
       address VARCHAR(255),
       description VARCHAR,
-      link VARCHAR(255),
+      link VARCHAR NOT NULL UNIQUE,
       image VARCHAR(255),
       latitude DECIMAL,
       longitude DECIMAL,
@@ -60,20 +46,16 @@ function loadDB() {
   )
   .catch(console.error);
 }
+loadDB();
 
 
 function loadEvents(request, response) {
   client.query('SELECT COUNT(*) FROM project301')
-  .then(result => {
-    if(!parseInt(result.rows[0].count)) {
-      client.query(
+  .then(client.query(
         `INSERT INTO
-        project301(artist, venue, date, time, address, description, link, image, latitude, longitude, genre) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)`,
+        project301(artist, venue, date, time, address, description, link, image, latitude, longitude, genre) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) ON CONFLICT DO NOTHING`,
         [request.body.artist, request.body.venue, request.body.date, request.body.time, request.body.address, request.body.description, request.body.link, request.body.image, request.body.latitude, request.body.longitude, request.body.genre]
-      ).then(response.send(this))
+      )).then(() => response.send('Update Complete'))
       .catch(console.error);
-    } else {
-        console.log('No new content');
-    }
-  })
 }
+app.post('/project301', loadEvents)
