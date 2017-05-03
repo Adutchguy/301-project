@@ -82,6 +82,10 @@ nav ul li a {
   text-decoration: none;
 }*/
 
+.about-site {
+  text-align: center;
+}
+
 /*FILTER*/
 .filter-container {
   height: 11vw;
@@ -119,7 +123,8 @@ nav ul li a {
 	position: absolute;
 	top: 5%;
 	right: 3%;
-	font-size: 110%;
+	font-size: 75%;
+  text-align: right;
 }
 
 .event-venue{

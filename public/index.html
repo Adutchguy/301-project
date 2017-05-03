@@ -16,10 +16,9 @@
 
     <script id="event-template" type="text/x-handlebars-template">
       <article class="event-articles" data-genre="{{genre}}">
-        <div class="event-date">{{date}} @ {{time}}
-        <p class="event-address">{{address}}</p>
-        </div>
-        <div>
+        <div class="event-date">{{date}} @ {{time}}</br>
+        {{address}}</div>
+        <div id="event-img">
           <img class="event-image" src="{{image}}" />
         </div>
         <div id="event-info">
@@ -35,9 +34,9 @@
     <header>
       <h1 id="page-name">THE SOUND</h1>
     </header>
-    <span class="about-site">
-      Instruction on how to use our site and brief discription on how to use it.
-    </span>
+    <p class="about-site">
+      Search below to find upcoming concerts in Seattle
+    </p>
     <section class="filter-container">
         <div>
           <ul id="filters">
