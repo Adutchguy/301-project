@@ -10,7 +10,6 @@
     });
   };
 
-
   eventView.populateFilters = function() {
     $('article').each(function() {
       if (!$(this).hasClass('template')) {
@@ -54,6 +53,9 @@
     });
   };
 
+    $(function () {
+        $('#calendar-filter').datetimepicker();
+    });
 
   module.eventView = eventView;
 })(window);
