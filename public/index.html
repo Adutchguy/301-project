@@ -16,24 +16,24 @@
 
     <script id="event-template" type="text/x-handlebars-template">
       <article class="event-articles" data-genre="{{genre}}">
-        <img class="event-image" src="{{image}}" />
-        <p class="event-artist">{{artist}}</p>
-        <p class="event-date">{{date}} @ {{time}}</p>
-        <p class="event-venue">{{venue}}</p>
+        <div class="event-date">{{date}} @ {{time}}
         <p class="event-address">{{address}}</p>
-        <p class="event-description">{{description}} <a href="{{link}}" target="_blank">Show More</a></p>
+        </div>
+        <div>
+          <img class="event-image" src="{{image}}" />
+        </div>
+        <div id="event-info">
+          <p class="event-artist">{{artist}}</p>
+          <p class="event-venue">{{venue}}</p>
+          <p class="event-description">{{description}} <a href="{{link}}" target="_blank">Show More</a></p>
+        </div>
       </article>
     </script>
   </head>
 
   <body>
     <header>
-      <nav id="main-nav">
-        <ul id="nav">
-          <li><a id="home" href="/">Home</a></li>
-          <li><a href="#about_us">Team</a></li>
-        </ul>
-      </nav>
+      <h1 id="page-name">THE SOUND</h1>
     </header>
     <span class="about-site">
       Instruction on how to use our site and brief discription on how to use it.
@@ -42,11 +42,13 @@
         <div>
           <ul id="filters">
             <li>
+              <p>Venue:</p>
               <select id="venue-filter">
                 <option value="">-- Filter by Venues --</option>
               </select>
             </li>
             <li>
+              <p>Genre:</p>
               <select id="genre-filter">
                 <option value="">-- Filter by Genres --</option>
               </select>

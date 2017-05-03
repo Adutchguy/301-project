@@ -8,18 +8,17 @@ nav ul li:hover > ul {
 
 ul {
   width:100%;
-  background-color: #FFF;
-  background: linear-gradient(#FFF 0%, #bbbbbb 100%);
-  box-shadow: 0px 0px 1em rgba(0,0,0,0.15);
+
   padding: 1em;
   border: 0.1em solid black;
   display: inline-block;
 }
 
 li {
-  width: 20%;
+  width: 29%;
   border-right: 1px solid #eeee;
   display: inline-block;
+  margin-left: 8.2vw;
 }
 
 li:last-child {
@@ -36,8 +35,13 @@ li a {
   text-align: center;
 }
 
+li p {
+  display: inline-block;
+  padding-bottom: 0.2em;
+}
 
-nav ul {
+
+/*nav ul {
   position: relative;
 	padding: 0 0 0 0;
   border: 1px solid black;
@@ -76,9 +80,12 @@ nav ul li a {
   padding-bottom: 1.5vw;
 	color: #000;
   text-decoration: none;
-}
+}*/
 
 /*FILTER*/
+.filter-container {
+  height: 11vw;
+}
 
 /*EVENTS*/
 .event-articles{

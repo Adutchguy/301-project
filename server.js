@@ -34,8 +34,7 @@ app.get('/ticketmaster/*', proxyTicketmaster);
 app.post('/project301', loadEvents);
 
 function loadEvents(request, response) {
-  console.log('anything');
-  console.log(Object.keys(request));
+
   client.query(
     `INSERT INTO
     project301(artist, venue, date, time, address, description, link, image, latitude, longitude, genre) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)`,

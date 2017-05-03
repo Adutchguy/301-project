@@ -11,17 +11,22 @@ header {
 }
 
 /*NAV*/
-nav {
+/*nav {
   position: absolute;
   top: 12%;
   transform: translate(-50%);
   left: 50%;
   width: 40%;
-  text-align: center;
+  text-align: center;*/
 }
 
 section {
   margin: 2% 0;
+}
+
+#page-name {
+	text-align: center;
+  padding-top: 0.7em;
 }
 
 #events {
