@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pied Piper</title>
+    <title>The Sound</title>
     <link rel="stylesheet" href="/vendor/styles/normalize.css">
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/icons.css">
@@ -21,15 +21,15 @@
 
     <script id="event-template" type="text/x-handlebars-template">
       <article class="event-articles" data-genre="{{genre}}">
-        <div class="event-date">{{date}} @ {{time}}</br>
+        <div class="event-venue">{{venue}}</br>
         {{address}}</div>
         <div id="event-img">
           <img class="event-image" src="{{image}}" />
         </div>
         <div id="event-info">
           <p class="event-artist">{{artist}}</p>
-          <p class="event-venue">{{venue}}</p>
-          <p class="event-description">{{description}} <a href="{{link}}" target="_blank">Show More</a></p>
+          <p class="event-date">{{date}} @ {{time}}</p>
+          <p class="event-link"><a href="{{link}}" target="_blank">Get Tickets</a></p>
         </div>
       </article>
     </script>
