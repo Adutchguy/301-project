@@ -10,6 +10,7 @@
     });
   };
 
+
   eventView.populateFilters = function() {
     $('article').each(function() {
       if (!$(this).hasClass('template')) {
@@ -52,6 +53,7 @@
       $('#venue-filter').val('');
     });
   };
+
 
   module.eventView = eventView;
 })(window);
