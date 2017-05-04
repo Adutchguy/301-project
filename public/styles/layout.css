@@ -1,6 +1,6 @@
 /*BODY*/
 body {
-  margin: 2% 10%;
+  margin: 1% 10%;
   padding: 0;
   color: #999;
 }
@@ -9,13 +9,17 @@ body {
 header {
   position: relative;
   font-family: Pacifico;
-  font-size: 35px;
+  font-size: 4vw;
   text-align: center;
-  background-image: url("imgs/seattle.png");
+  background-image: url("public/imgs/seattle.png");
+}
+
+button {
+  float: right;
 }
 
 section {
-  margin: 2% 0;
+  margin: 1% 0;
 }
 
 
