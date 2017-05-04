@@ -5,8 +5,20 @@
   function Event(data) {
     this.venue = data._embedded.venues[0].name;
     this.artist = data._embedded.attractions[0].name;
-    this.date = Date.parse(data.dates.start.localDate).toString("MMMM-dd-yyyy");
-    this.time = Date.parse(data.dates.start.localTime).toString("h:mmtt");
+    this.date = function() {
+      if (data.dates.start.localDate) {
+        return Date.parse(data.dates.start.localDate).toString("MMMM-dd-yyyy");
+      } else {
+        return data.dates.start.localDate;
+      }
+    };
+    this.time = function() {
+      if (data.dates.start.localTime) {
+        return Date.parse(data.dates.start.localTime).toString("h:mmtt");
+      } else {
+        return data.dates.start.localTime;
+      }
+    };
     this.address = data._embedded.venues[0].address.line1 + ', ' + data._embedded.venues[0].city.name;
     this.description = data.info;
     this.link = data.url;
