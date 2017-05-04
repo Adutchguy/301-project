@@ -23,7 +23,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.get('/', (request,response) => response.sendFile('index.html', {root:'./public'}))
-
+app.get('/db', (request, response) => {
+  client.query(`
+    SELECT * FROM project301 WHERE artist IS NOT NULL;`
+  )
+  .then(result => response.send(result.rows))
+  .catch(console.error);
+});
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
 

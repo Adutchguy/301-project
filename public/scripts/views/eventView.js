@@ -19,7 +19,6 @@
         var val = $(this).find('p.venue').text();
         var optionTag = `<option value="${val}">${val}</option>`;
         // debugger;
-        console.log(val);
         if (true) {
         $('.venue-filter').append(optionTag);
         }
