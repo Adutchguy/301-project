@@ -23,10 +23,12 @@ section {
   height: auto;
 }
 
+footer {
+  text-align: center;
+}
+
 .the-team {
   display: inline-block;
-  text-align: center;
-  padding-top: 0.5em;
   font-size: 20px;
   width: 19%;
 }
