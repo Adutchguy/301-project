@@ -11,6 +11,7 @@
     });
     eventView.populateFilters();
     eventView.handleVenueFilter();
+    eventView.handleGenreFilter();
   };
 
   eventView.populateFilters = function() {
@@ -50,17 +51,17 @@
     });
   };
 
-  // eventView.handleGenreFilter = function() {
-  //   $('#genre-filter').on('change', function() {
-  //     if ($(this).val()) {
-  //       $('article').hide();
-  //       $(`article[data-genre="${$(this).val()}"]`).fadeIn();
-  //     } else {
-  //       $('article').fadeIn();
-  //     }
-  //     $('#venue-filter').val('');
-  //   });
-  // };
+  eventView.handleGenreFilter = function() {
+    $('.genre-filter').on('change', function() {
+      if ($(this).val()) {
+        $('article').hide();
+        $(`article[data-genre="${$(this).val()}"]`).fadeIn();
+      } else {
+        $('article').fadeIn();
+      }
+      // $('#venue-filter').val('');
+    });
+  };
 
     // $(function () {
     //     $('#calendar-filter').datetimepicker();
