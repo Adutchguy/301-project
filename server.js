@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 app.get('/', (request,response) => response.sendFile('index.html', {root:'./public'}))
 app.get('/db', (request, response) => {
   client.query(`
-    SELECT * FROM project301 WHERE artist IS NOT NULL;`
+    SELECT artist, venue, date, time, address, description, link, image, genre FROM project301 WHERE artist IS NOT NULL`
   )
   .then(result => response.send(result.rows))
   .catch(console.error);
@@ -36,13 +36,13 @@ function loadDB() {
   client.query(`
     CREATE TABLE IF NOT EXISTS
     project301 (
-      artist VARCHAR(255),
+      artist VARCHAR(255) UNIQUE,
       venue VARCHAR(255),
       date DATE,
       time TIME,
       address VARCHAR(255),
       description VARCHAR,
-      link VARCHAR NOT NULL UNIQUE,
+      link VARCHAR NOT NULL,
       image VARCHAR(255),
       latitude DECIMAL,
       longitude DECIMAL,
