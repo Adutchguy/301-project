@@ -21,7 +21,8 @@
 
     <script id="event-template" type="text/x-handlebars-template">
       <article class="event-articles" data-genre="{{genre}}">
-        <div class="event-venue">{{venue}}</br>
+        <div class="event-venue"><p class="venue">
+          {{venue}}</p></br>
         {{address}}</div>
         <div id="event-img">
           <img class="event-image" src="{{image}}" />
@@ -47,7 +48,7 @@
           <ul id="filters">
             <li>
               <p>Venue:</p>
-              <select id="venue-filter">
+              <select class="venue-filter">
                 <option value="">-- Filter by Venues --</option>
               </select>
             </li>
