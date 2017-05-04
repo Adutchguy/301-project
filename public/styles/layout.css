@@ -8,16 +8,16 @@ body {
 /*HEADER*/
 header {
   position: relative;
+  font-family: Pacifico;
+  font-size: 35px;
+  text-align: center;
+  background-image: url("imgs/seattle.png");
 }
 
 section {
   margin: 2% 0;
 }
 
-#page-name {
-	text-align: center;
-  padding-top: 0.7em;
-}
 
 #events {
   height: auto;
