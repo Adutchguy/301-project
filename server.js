@@ -55,12 +55,11 @@ loadDB();
 
 
 function loadEvents(request, response) {
-  client.query('SELECT COUNT(*) FROM project301')
-  .then(client.query(
+  client.query(
         `INSERT INTO
         project301(artist, venue, date, time, address, description, link, image, latitude, longitude, genre) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) ON CONFLICT DO NOTHING`,
         [request.body.artist, request.body.venue, request.body.date, request.body.time, request.body.address, request.body.description, request.body.link, request.body.image, request.body.latitude, request.body.longitude, request.body.genre]
-      )).then(() => response.send('Update Complete'))
+      ).then(() => response.send('Update Complete'))
       .catch(console.error);
 }
 app.post('/project301', loadEvents)
