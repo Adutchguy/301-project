@@ -23,6 +23,21 @@ section {
   height: auto;
 }
 
+.the-team {
+  display: inline-block;
+  text-align: center;
+  padding-top: 0.5em;
+  width: 19%;
+}
+
+.team-pics {
+  border-radius: 100%;
+  width: 70%;
+  font-size: 10px;
+  justify-content: center;
+
+}
+
 /*SECTION*/
 
 /*FOOTER*/
