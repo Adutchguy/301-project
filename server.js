@@ -9,7 +9,6 @@ const express = require('express');
 
 const requestProxy = require('express-request-proxy');
 const bodyParser = require('body-parser');
-const request = require('superagent');
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -22,8 +21,12 @@ app.use(express.static('./public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-app.get('/', (request,response) => response.sendFile('index.html', {root:'./public'}))
-
+app.get('/project301', (request, response) => {
+  client.query(`
+    SELECT artist, venue, date, time, address, description, link, image, genre FROM project301`
+  ).then(result => response.send(result.rows))
+  .catch(console.error);
+});
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
 
