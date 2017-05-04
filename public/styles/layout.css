@@ -27,15 +27,15 @@ section {
   display: inline-block;
   text-align: center;
   padding-top: 0.5em;
+  font-size: 20px;
   width: 19%;
 }
 
 .team-pics {
   border-radius: 100%;
-  width: 70%;
-  font-size: 10px;
+  width: 60%;
   justify-content: center;
-
+  margin: auto
 }
 
 /*SECTION*/
