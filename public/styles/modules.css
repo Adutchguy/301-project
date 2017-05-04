@@ -3,7 +3,7 @@
 /*FILTERS*/
 
 .filter-container {
-	height: 7vw;
+	height: 5vw;
 }
 
 ul {
@@ -69,8 +69,14 @@ li p {
 
 .about-site {
   text-align: center;
+	font-size: 1.7vw;
 }
 
+.about-site a {
+	font-size: 1.9vw;
+	font-style: italic;
+	text-decoration: none;
+}
 
 /*EVENTS*/
 .event-articles{
@@ -79,7 +85,7 @@ li p {
 	height: 11vw;
 	border: 1px solid white;
 	border-radius: 10px;
-	margin: 0.5% 0;
+	/*margin: 0.5% 0;*/
 	overflow: hidden;
 }
 
@@ -95,8 +101,8 @@ li p {
 	top: 5%;
 	text-decoration: none;
 	width: auto;
-	font-size: 148%;
-	margin-bottom: 0.4em;
+	font-size: 130%;
+	margin-bottom: 0.3em;
 }
 
 .event-venue {
@@ -117,9 +123,9 @@ li p {
 }
 
 .event-link a {
-	bottom: 10%;
+	bottom: 7%;
 	color: inherit;
-	margin-bottom: 0.2em;
+	margin-bottom: 0.1em;
 	font-style: oblique;
 }
 
