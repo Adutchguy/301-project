@@ -39,15 +39,12 @@
     $('.venue-filter').on('change', function() {
       if ($(this).val()) {
         console.log($(this).val());
-        // debugger;
         $('article').hide();
-        // debugger;
         $(`article[data-venue="${$(this).val()}"]`).fadeIn();
         console.log(`article[data-venue="${$(this).val()}"]`);
       } else {
         $('article').fadeIn();
       }
-      // $('#genre-filter').val('');
     });
   };
 
@@ -59,13 +56,8 @@
       } else {
         $('article').fadeIn();
       }
-      // $('#venue-filter').val('');
     });
   };
-
-    // $(function () {
-    //     $('#calendar-filter').datetimepicker();
-    // });
 
   module.eventView = eventView;
 })(window);

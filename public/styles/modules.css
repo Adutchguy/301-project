@@ -1,21 +1,16 @@
 /*HEADER*/
 
-/*NAV DESIGN*/
-
-nav ul li:hover > ul {
-	display: block;
-}
+/*FILTERS*/
 
 ul {
-  width:100%;
-
-  padding: 1em;
-  border: 0.1em solid black;
-  display: inline-block;
+	width: 67%;
+	height: 10vw;
+	display: block;
+	padding: 0;
+	margin: auto;
 }
 
 li {
-  width: 29%;
   border-right: 1px solid #eeee;
   display: inline-block;
   margin-left: 1.3vw;
@@ -30,7 +25,6 @@ li a {
   display: inline-block;
   width: 80%;
   background: #ddd;
-  padding: 4% 10%;
   font-size: 1.1em;
   text-decoration: none;
   text-align: center;
@@ -41,6 +35,29 @@ li p {
   padding-bottom: 0.2em;
 }
 
+#venue-filter-cont{
+	width: 45%;
+	float: left;
+	margin: 0;
+	height: 100%;
+}
+
+#venue-filter-cont select{
+	width: 100%;
+	height: 40%;
+}
+
+#genre-filter-cont{
+	width: 45%;
+	float: right;
+	margin: 0;
+	height: 100%;
+}
+
+#genre-filter-cont select{
+	width: 100%;
+	height: 40%;
+}
 
 .about-site {
   text-align: center;
