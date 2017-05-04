@@ -11,6 +11,7 @@
     });
     eventView.populateFilters();
     eventView.handleVenueFilter();
+    eventView.handleGenreFilter();
   };
 
   eventView.populateFilters = function() {
@@ -24,7 +25,11 @@
         $('.venue-filter').append(optionTag);
         }
 
-        val = $(this).attr('data-genre');
+        if ($(this).attr('data-genre') == 'Undefined') {
+          val = 'Other'
+          }else {
+            val = $(this).attr('data-genre');
+          }
         optionTag = `<option value="${val}">${val}</option>`;
         if ($(`.genre-filter option[value="${val}"]`).length === 0) {
           $('.genre-filter').append(optionTag);
@@ -33,36 +38,36 @@
     });
   };
 
-
   eventView.handleVenueFilter = function() {
     $('.venue-filter').on('change', function() {
       if ($(this).val()) {
-        // debugger;
         $('article').hide();
-        // debugger;
-        $(`article[data-venue='${$(this).val()}']`).show();
+        $(`article[data-venue="${$(this).val()}"]`).fadeIn(800);
       } else {
-        $('article').fadeIn();
+        $('article').hide();
+        $('article').fadeIn(800);
       }
-      // $('#genre-filter').val('');
+      $('.genre-filter').val('');
     });
   };
 
-  // eventView.handleGenreFilter = function() {
-  //   $('#genre-filter').on('change', function() {
-  //     if ($(this).val()) {
-  //       $('article').hide();
-  //       $(`article[data-genre="${$(this).val()}"]`).fadeIn();
-  //     } else {
-  //       $('article').fadeIn();
-  //     }
-  //     $('#venue-filter').val('');
-  //   });
-  // };
-
-    // $(function () {
-    //     $('#calendar-filter').datetimepicker();
-    // });
+  eventView.handleGenreFilter = function() {
+    $('.genre-filter').on('change', function() {
+      if ($(this).val() == 'Other') {
+        var val = 'Undefined'
+      } else {
+          var val = $(this).val();
+        }
+      if (val) {
+        $('article').hide();
+        $(`article[data-genre="${val}"]`).fadeIn(800);
+      } else {
+        $('article').hide();
+        $('article').fadeIn(800);
+      }
+      $('.venue-filter').val('');
+    });
+  };
 
   module.eventView = eventView;
 })(window);
