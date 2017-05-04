@@ -11,11 +11,11 @@ header {
   font-family: Pacifico;
   font-size: 4vw;
   text-align: center;
-  background-image: url("public/imgs/seattle.png");
 }
 
 button {
   float: right;
+  background-image: url("../imgs/seattle.png");
 }
 
 section {
