@@ -23,7 +23,7 @@ Database.fetchAll = callback => {
   .then(
     results => {
       Database.loadAll(results);
-      callback();
+      // callback();
     }
   )
 };
