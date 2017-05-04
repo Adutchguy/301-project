@@ -10,34 +10,43 @@
       $('#events').append(template(arrayItem));
     });
     eventView.populateFilters();
+    eventView.handleVenueFilter();
   };
 
   eventView.populateFilters = function() {
     $('.event-articles').each(function() {
       if (!$(this).hasClass('event-template')) {
         eventView.eventNames.push($(this).find('p.venue').text());
-        var val = $(this).find('p.venue').text();
-        var optionTag = `<option value="${val}">${val}</option>`;
-        // debugger;
-        if (true) {
+        let val = $(this).find('p.venue').text();
+        let optionTag = `<option value="${val}">${val}</option>`;
+
+        if ($(`.venue-filter option[value="${val}"]`).length === 0) {
         $('.venue-filter').append(optionTag);
+        }
+
+        val = $(this).attr('data-genre');
+        optionTag = `<option value="${val}">${val}</option>`;
+        if ($(`.genre-filter option[value="${val}"]`).length === 0) {
+          $('.genre-filter').append(optionTag);
         }
       }
     });
   };
 
 
-  // eventView.handleVenueFilter = function() {
-  //   $('#venue-filter').on('change', function() {
-  //     if ($(this).val()) {
-  //       $('article').hide();
-  //       $(`article[event-venue="${$(this).val()}"]`).fadeIn();
-  //     } else {
-  //       $('article').fadeIn();
-  //     }
-  //     $('#genre-filter').val('');
-  //   });
-  // };
+  eventView.handleVenueFilter = function() {
+    $('.venue-filter').on('change', function() {
+      if ($(this).val()) {
+        // debugger;
+        $('article').hide();
+        // debugger;
+        $(`article[data-venue='${$(this).val()}']`).show();
+      } else {
+        $('article').fadeIn();
+      }
+      // $('#genre-filter').val('');
+    });
+  };
 
   // eventView.handleGenreFilter = function() {
   //   $('#genre-filter').on('change', function() {
@@ -54,7 +63,6 @@
     // $(function () {
     //     $('#calendar-filter').datetimepicker();
     // });
-    eventView.populateFilters();
 
   module.eventView = eventView;
 })(window);

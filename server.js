@@ -9,7 +9,6 @@ const express = require('express');
 
 const requestProxy = require('express-request-proxy');
 const bodyParser = require('body-parser');
-const request = require('superagent');
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -21,6 +20,7 @@ client.on('error', err => console.error(err));
 app.use(express.static('./public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+
 
 app.get('/', (request,response) => response.sendFile('index.html', {root:'./public'}))
 app.get('/db', (request, response) => {
