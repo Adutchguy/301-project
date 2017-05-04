@@ -37,10 +37,12 @@
   eventView.handleVenueFilter = function() {
     $('.venue-filter').on('change', function() {
       if ($(this).val()) {
+        console.log($(this).val());
         // debugger;
         $('article').hide();
         // debugger;
-        $(`article[data-venue='${$(this).val()}']`).show();
+        $(`article[data-venue="${$(this).val()}"]`).fadeIn();
+        console.log(`article[data-venue="${$(this).val()}"]`);
       } else {
         $('article').fadeIn();
       }
