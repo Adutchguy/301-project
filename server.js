@@ -21,7 +21,6 @@ app.use(express.static('./public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-
 app.get('/', (request,response) => response.sendFile('index.html', {root:'./public'}))
 app.get('/db', (request, response) => {
   client.query(`
