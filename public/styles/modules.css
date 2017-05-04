@@ -2,9 +2,13 @@
 
 /*FILTERS*/
 
+.filter-container {
+	height: 7vw;
+}
+
 ul {
 	width: 67%;
-	height: 10vw;
+	height: 7vw;
 	display: block;
 	padding: 0;
 	margin: auto;
@@ -67,10 +71,6 @@ li p {
   text-align: center;
 }
 
-/*FILTER*/
-.filter-container {
-  height: 11vw;
-}
 
 /*EVENTS*/
 .event-articles{

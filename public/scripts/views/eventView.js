@@ -25,7 +25,11 @@
         $('.venue-filter').append(optionTag);
         }
 
-        val = $(this).attr('data-genre');
+        if ($(this).attr('data-genre') == 'Undefined') {
+          val = 'Other'
+          }else {
+            val = $(this).attr('data-genre');
+          }
         optionTag = `<option value="${val}">${val}</option>`;
         if ($(`.genre-filter option[value="${val}"]`).length === 0) {
           $('.genre-filter').append(optionTag);
@@ -34,28 +38,34 @@
     });
   };
 
-
   eventView.handleVenueFilter = function() {
     $('.venue-filter').on('change', function() {
       if ($(this).val()) {
-        console.log($(this).val());
         $('article').hide();
-        $(`article[data-venue="${$(this).val()}"]`).fadeIn();
-        console.log(`article[data-venue="${$(this).val()}"]`);
+        $(`article[data-venue="${$(this).val()}"]`).fadeIn(800);
       } else {
-        $('article').fadeIn();
+        $('article').hide();
+        $('article').fadeIn(800);
       }
+      $('.genre-filter').val('');
     });
   };
 
   eventView.handleGenreFilter = function() {
     $('.genre-filter').on('change', function() {
-      if ($(this).val()) {
-        $('article').hide();
-        $(`article[data-genre="${$(this).val()}"]`).fadeIn();
+      if ($(this).val() == 'Other') {
+        var val = 'Undefined'
       } else {
-        $('article').fadeIn();
+          var val = $(this).val();
+        }
+      if (val) {
+        $('article').hide();
+        $(`article[data-genre="${val}"]`).fadeIn(800);
+      } else {
+        $('article').hide();
+        $('article').fadeIn(800);
       }
+      $('.venue-filter').val('');
     });
   };
 
