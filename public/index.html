@@ -20,7 +20,7 @@
     crossorigin="anonymous"></script>
 
     <script id="event-template" type="text/x-handlebars-template">
-      <article class="event-articles" data-genre="{{genre}}">
+      <article class="event-articles" data-genre="{{genre}}" data-venue="{{venue}}">
         <div class="event-venue"><p class="venue">
           {{venue}}</p></br>
         {{address}}</div>
@@ -34,6 +34,7 @@
         </div>
       </article>
     </script>
+
   </head>
 
   <body>
@@ -54,7 +55,7 @@
             </li>
             <li>
               <p>Genre:</p>
-              <select id="genre-filter">
+              <select class="genre-filter">
                 <option value="">-- Filter by Genres --</option>
               </select>
             </li>
