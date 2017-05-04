@@ -6,7 +6,7 @@
 
   eventView.render = function() {
     const template = Handlebars.compile($('#event-template').text());
-    events.objects.forEach(arrayItem => {
+    Database.all.forEach(arrayItem => {
       $('#events').append(template(arrayItem));
     });
     eventView.populateFilters();
