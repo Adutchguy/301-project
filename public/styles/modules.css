@@ -6,7 +6,7 @@
 	height: 5vw;
 }
 
-ul {
+/*ul {
 	width: 67%;
 	height: 7vw;
 	display: block;
@@ -37,13 +37,14 @@ li a {
 li p {
   display: inline-block;
   padding-bottom: 0.2em;
-}
+}*/
 
 #venue-filter-cont{
 	width: 45%;
 	float: left;
 	margin: 0;
 	height: 100%;
+	color: #333333;
 }
 
 #venue-filter-cont select{
@@ -58,6 +59,7 @@ li p {
 	float: right;
 	margin: 0;
 	height: 100%;
+	color: #333333;
 }
 
 #genre-filter-cont select{
@@ -69,7 +71,8 @@ li p {
 
 .about-site {
   text-align: center;
-	font-size: 1.7vw;
+	font-size: 1.5vw;
+	padding-top: 2em;
 }
 
 .about-site a {
@@ -87,6 +90,8 @@ li p {
 	border-radius: 10px;
 	/*margin: 0.5% 0;*/
 	overflow: hidden;
+	padding-bottom: 3em;
+	margin-bottom: 0.5em;
 }
 
 .event-image {
