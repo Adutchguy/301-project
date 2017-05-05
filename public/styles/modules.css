@@ -6,7 +6,7 @@
 	height: 5vw;
 }
 
-/*ul {
+ul {
 	width: 67%;
 	height: 7vw;
 	display: block;
@@ -37,7 +37,7 @@ li a {
 li p {
   display: inline-block;
   padding-bottom: 0.2em;
-}*/
+}
 
 #venue-filter-cont{
 	width: 45%;

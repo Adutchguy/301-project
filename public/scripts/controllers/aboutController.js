@@ -1,9 +1,12 @@
 'use strict';
 
-// $(document).ready(function() {
-//   $('.the-team').hide();
-//   $('#about-button').click(function(){
-//     $('#events').hide();
-//     $('.the-team').show();
-//   });
-// });
+(function(module) {
+  const aboutController = {};
+
+  aboutController.init = function() {
+    $('section').hide();
+    $('.the-team').show();
+  }
+
+  module.aboutController = aboutController;
+})(window);
