@@ -51,3 +51,7 @@ footer {
   justify-content: center;
   margin: auto
 }
+
+.the-team p {
+  font-size: 2vw;
+}
