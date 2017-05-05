@@ -13,7 +13,7 @@
   });
 
   events.requestEvents = (callback) => {
-    $.get(`https://app.ticketmaster.com/discovery/v2/events.json?size=20&sort=date,name,asc&city=Seattle&classificationName=Music&apikey=aPLdF6GC2G6nLNrygytPbkvPzCU7CjGS`)
+    $.get(`https://app.ticketmaster.com/discovery/v2/events.json?size=100&sort=date,name,asc&city=Seattle&classificationName=Music&apikey=aPLdF6GC2G6nLNrygytPbkvPzCU7CjGS`)
     .done(data => events.all = data._embedded.events)
     .done(data => {
       events.fetchAll(data);
