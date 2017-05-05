@@ -10,13 +10,10 @@
     <link rel="stylesheet" href="./styles/layout.css">
     <link rel="stylesheet" href="./styles/modules.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Pacifico">
-    <link href = "https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" rel = "stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-    crossorigin="anonymous"></script>
-
     <script id="event-template" type="text/x-handlebars-template">
       <article class="event-articles" data-genre="{{genre}}" data-venue="{{venue}}">
         <div class="event-venue">
@@ -45,7 +42,7 @@
     <p class="about-site">
       Search below to find upcoming concerts in Seattle.
     </p>
-    <section class="tab filter-container" class>
+    <section class="tab filter-container">
         <ul id="filters">
           <li id="venue-filter-cont">
             <select class="venue-filter">
@@ -59,7 +56,7 @@
           </li>
         </ul>
     </section>
-    <section id="events" class="tab">
+    <section id="events">
     </section>
     <footer>
       <h2 id="team">The Team</h2>
@@ -93,6 +90,5 @@
     <script src="scripts/controllers/indexTeamController.js"></script>
     <script src="scripts/controllers/routes.js"></script>
 
-    </script>
   </body>
 </html>
