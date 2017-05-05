@@ -18,7 +18,7 @@ button {
   background-color: rgba(38, 38, 38, 0.5);
   border: 1px solid rgba(38, 38, 38, 0.5);
   font-family: serif;
-  color: #999;
+  color: #E8E8E8;
 }
 
 section {
@@ -43,13 +43,16 @@ footer {
   display: inline-block;
   font-size: 20px;
   width: 19%;
+  padding-top: 1em;
 }
 
 .team-pics {
   border-radius: 100%;
   width: 60%;
   justify-content: center;
-  margin: auto
+  /*margin: auto;*/
+  padding-top: 0;
+  margin-top: 1em;
 }
 
 .the-team p {

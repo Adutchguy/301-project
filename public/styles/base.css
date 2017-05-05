@@ -5,16 +5,18 @@ body {
   width: 80%;
   background: #000;
   font-size: 2vw;
-  color: #999;
+  color: #E8E8E8;
 }
 
 header {
   height: 10vw;
   width: 100%;
+  color: #E8E8E8;
 }
 
 h1 {
   margin: 0.1em auto;
+  color: #E8E8E8;
 }
 
 section {
