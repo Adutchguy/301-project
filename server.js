@@ -12,7 +12,7 @@ const bodyParser = require('body-parser');
 
 const PORT = process.env.PORT || 3000;
 const app = express();
-const conString = process.env.DATABASE_URL;
+const conString = process.env.DATABASE_URL + 'project301';
 const client = new pg.Client(conString);
 client.connect();
 client.on('error', err => console.error(err));
@@ -22,6 +22,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.get('/', (request,response) => response.sendFile('index.html', {root:'./public'}))
+app.get('/team', (request,response) => response.sendFile('index.html', {root:'./public'}))
+app.get('/home', (request,response) => response.sendFile('index.html', {root:'./public'}))
 app.get('/db', (request, response) => {
   client.query(`
     SELECT artist, venue, date, time, address, description, link, image, genre FROM project301 WHERE artist IS NOT NULL`
@@ -36,13 +38,13 @@ function loadDB() {
   client.query(`
     CREATE TABLE IF NOT EXISTS
     project301 (
-      artist VARCHAR(255) UNIQUE,
+      artist VARCHAR(255),
       venue VARCHAR(255),
       date DATE,
       time TIME,
       address VARCHAR(255),
       description VARCHAR,
-      link VARCHAR NOT NULL,
+      link VARCHAR NOT NULL UNIQUE,
       image VARCHAR(255),
       latitude DECIMAL,
       longitude DECIMAL,

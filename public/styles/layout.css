@@ -14,8 +14,10 @@ header {
 }
 
 button {
-  float: right;
-  background-image: url("../imgs/seattle.png");
+  background-color: rgba(38, 38, 38, 0.5);
+  border: 1px solid rgba(38, 38, 38, 0.5);
+  font-family: serif;
+  color: #999;
 }
 
 section {
@@ -33,6 +35,7 @@ section {
 /*FOOTER*/
 footer {
   text-align: center;
+  display: none;
 }
 
 .the-team {
