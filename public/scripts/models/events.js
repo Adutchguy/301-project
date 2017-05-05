@@ -13,8 +13,8 @@
   });
 
   events.requestEvents = (callback) => {
-    console.log(process.env.TICKETMASTER_TOKEN);
-    $.get(`https://app.ticketmaster.com/discovery/v2/events.json?size=20&sort=date,name,asc&city=Seattle&classificationName=Music&apikey=${process.env.TICKETMASTER_TOKEN}`)
+    console.log(TICKETMASTER_TOKEN);
+    $.get(`https://app.ticketmaster.com/discovery/v2/events.json?size=20&sort=date,name,asc&city=Seattle&classificationName=Music&apikey=${TICKETMASTER_TOKEN}`)
     .done(data => events.all = data._embedded.events)
     .done(data => {
       events.fetchAll(data);
