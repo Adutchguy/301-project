@@ -14,11 +14,11 @@
 
   events.requestEvents = (callback) => {
     $.get(`https://app.ticketmaster.com/discovery/v2/events.json?size=30&sort=date,name,asc&city=Seattle&classificationName=Music&apikey=aPLdF6GC2G6nLNrygytPbkvPzCU7CjGS`)
-    .done(data => events.all = data._embedded.events)
-    .done(data => {
+    .then(data => events.all = data._embedded.events)
+    .then(data => {
       events.fetchAll(data);
     })
-    .done(callback), err => console.log(err)
+    .then(callback), err => console.log(err)
   };
 
   module.events = events;
