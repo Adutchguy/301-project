@@ -1,5 +1,24 @@
 /*HEADER*/
 
+#home-button {
+	display: none;
+	position: fixed;
+	top: 2%;
+	right: 8%;
+	width: 4%;
+	height: 4vw;
+  font-size: 1.5vw;
+}
+
+#team-button {
+	position: fixed;
+	top: 2%;
+	right: 8%;
+	width: 4%;
+	height: 4vw;
+  font-size: 1.5vw;
+}
+
 /*FILTERS*/
 
 .filter-container {
